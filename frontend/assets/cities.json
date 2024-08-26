@@ -1,0 +1,15 @@
+{
+	"cities": [{
+		"id":"1",
+		"name":"Chennai"
+	},{
+        "id":"2",
+		"name":"Hyderabad"
+    },{
+        "id":"3",
+		"name":"Mumbai"
+    },{
+       "id":"4",
+		"name":"Delhi"
+    }]
+}

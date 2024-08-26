@@ -1,0 +1,239 @@
+body{
+    background-color: #001233;
+    color: #f1e1cc;
+    font-family: monospace;
+}
+
+.car-gif:hover{
+    rotate: -4deg;
+        zoom: 1.25;
+        transition: 0.5s;
+        border-radius: 25%;
+        width: 300;
+        height: 300;
+        display: block;
+}
+.content{
+    font-size: 1.6rem;
+    margin-top: 150px;
+}
+
+.get-started{
+    margin-top: 70px;
+    background-color: #f1e1cc;
+    padding: 13px 30px;
+    font-size: 1.5rem;
+    color: #001233;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.get-started:hover {
+    color: #f1e1cc;
+}
+
+
+.cities{
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-style: italic; 
+}
+
+
+.cities-section{
+    display: flex;
+    margin-top: 80px;
+}
+
+.road-image{
+    background-image: url("./road.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1200px;
+}
+
+span{
+    color: #ff595a;
+    font-weight: 800;
+}
+
+
+.featured{
+    margin-bottom: 130px;
+    margin-top: 140px;
+}
+
+
+
+#roadmap{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+#rent-now{
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+.fa-calendar,
+.fa-clock-o {
+    font-size: 1.5em;
+}
+
+.datetimepicker-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.process-block {
+    margin-top: -54px;
+}
+
+.bullet {
+    z-index: 1;
+    position: v absolute;
+    background: #ff595a;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    transition: 0.3s ease;
+}
+
+.bullet:hover {
+    background: var(--accent-color);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 12px #f5f5dc;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 990px) {
+    .progress-line {
+        display: none;
+    }
+}
+
+.rent-now-button {
+    margin-top: 70px;
+    background-color: #f1e1cc;
+    padding: 13px 30px;
+    font-size: 1.5rem;
+    color: #001233;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.rent-now-button:hover {
+    color: #f1e1cc;
+}
+
+#about{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6em;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    background-color: #182847;
+    padding: 60px;
+}
+
+
+#roadmap{
+    padding-top: 60px;
+    font-family: monospace;
+    font-style: oblique;
+}
+
+#rent-now{
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+
+.search-button{
+    background-color: #f1e1cc;
+    color: #001233;
+    padding: 13px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.search-button:hover{
+    color: #f1e1cc;
+}
+
+
+
+#testimonial{
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+p.testimonial-p {
+    font-size: 32px;
+    color: var(--body-text-color);
+}
+
+.testimonial-swiper-button {
+    bottom: 135px;
+    right: 213px;
+    width: 120px;
+}
+
+.swiper-button-prev.testimonial-arrow,
+.swiper-button-next.testimonial-arrow {
+    color: #FFFFFF;
+    --swiper-navigation-size: 30px;
+    font-weight: bold;
+}
+
+.arrow-divider {
+    font-size: 30px;
+    color: var(--grey-color);
+    padding-left: 56px;
+    padding-bottom: 6px;
+}
+
+@media only screen and (max-width: 900px) {
+    p.testimonial-p {
+        font-size: 25px;
+        color: var(--body-text-color);
+    }
+
+}
+
+
+.input-box{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+ .footer-text {
+     color: #f1e1cc;
+ }
+
+ .footer-text:hover {
+     color: #ff595a;
+ }
+
+
+.subscribe-button{
+    background-color: #f1e1cc;
+    color: #001233;
+    /* padding: 13px 30px; */
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.bi {
+    color: #f1e1cc;
+}
+
+.bi:hover {
+    zoom: 1.5;
+    color: #ff595a;
+}

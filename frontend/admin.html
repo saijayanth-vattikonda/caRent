@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Car</title>
+  </head>
+  <body>
+    <h1>Add Car</h1>
+    <form id="carForm" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea><br /><br />
+
+      <label for="transmission">Transmission:</label>
+      <input type="text" id="transmission" name="transmission" /><br /><br />
+
+      <label for="fuel">Fuel:</label>
+      <input type="text" id="fuel" name="fuel" /><br /><br />
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" /><br /><br />
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" /><br /><br />
+
+      <select id="citySelect" aria-placeholder="Select City">
+        <option value="1">Chennai</option>
+        <option value="2">Hyderabad</option>
+        <option value="3">Mumbai</option>
+        <option value="4">Delhi</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const addCar = document.getElementById("carForm");
+      addCar.addEventListener("submit", addCarDetails);
+
+      async function addCarDetails(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const description = document.getElementById("description").value;
+        const transmission = document.getElementById("transmission").value;
+        const fuel = document.getElementById("fuel").value;
+        const model = document.getElementById("model").value;
+        const price = document.getElementById("price").value;
+        const location = document.getElementById("citySelect").value;
+
+        // Send form data to backend API
+        const result = await fetch("/car/addCar", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            description,
+            transmission,
+            fuel,
+            model,
+            price,
+            location,
+          }),
+        }).then((res) => res.json());
+
+        if (result.status === "ok") {
+          alert("Car created successfully!");
+          event.target.reset();
+        } else {
+          alert(result.error);
+        }
+      }
+    </script>
+  </body>
+</html>

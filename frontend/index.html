@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>caRent - The Car Rental Website</title>
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+
+    <!-- Navbar Start -->
+
+    <nav class="navbar navbar-expand-lg  sticky-top shadow-sm" id="stylemyNav" style="background-color: #001233;">
+        <div class="container-fluid" style="background-color: #001233;">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand  fs-1 fw-bold font-monospace" href="#" style="color:#ff595a">
+                    <img src="../assets/car.gif" alt="Logo" width="85" height="50" class="d-inline-block align-text-top car-gif">
+                    caRent
+                </a>
+            </div>
+            <button class="navbar-toggler m-3 bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-content collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-8" aria-current="page" href="#" style="color:#ff595a">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-8" href="#about" style="color:#ff595a">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-8" href="#faq" style="color:#ff595a">FAQ</a>
+                    </li>
+                    <button class="btn btn-outline-light pt-0 pb-0 pl-1 pr-1 fw-bold border-0" style="color:#ff595a"
+                        id="loginButton" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade " id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: #001233;">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #ff595a">Log in</h5>
+                </div>
+                <div class="modal-body" style="background-color: #001233;">
+                  <form method="post" id="login-form">
+                    <div class="mb-3">
+                        <label for="" class="form-label" style="color: #ff595a">Username</label>
+                        <input type="text" class="form-control" id="loginUsername" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" style="color: #ff595a">Password</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1" style="color: #ff595a">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-light fw-bold" style="color: #ff595a">Log in</button><br><br>
+                    <span style="color: white;"> Don't have an Account? </span><a href="#" id="Signup"
+                        data-bs-toggle="modal" data-bs-target="#myModal1">Create one</a>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeBtn" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: #001233;">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel" style="color: #ff595a">Sign up</h5>
+                </div>
+                <div class="modal-body" style="background-color: #001233;">
+                  <form method="post" id="signup-form">
+                    <div class="mb-3">
+                        <label for="exampleFirstName" class="form-label" style="color: #ff595a">First Name</label>
+                        <input type="text" class="form-control" id="firstName"
+                            aria-describedby="usernameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleLastName" class="form-label" style="color: #ff595a">Last Name</label>
+                        <input type="text" class="form-control" id="lastName"
+                            aria-describedby="usernameHelp">
+                    </div>
+                     <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" style="color: #ff595a">Username</label>
+                        <input type="text" class="form-control" id="signupUsername"
+                            aria-describedby="usernameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" style="color: #ff595a">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      </div>
+                    <div class="mb-3">
+                        <label for="examplePhoneNumber" class="form-label" style="color: #ff595a">Phone Number:</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" style="color: #ff595a">Password</label>
+                        <input type="password" class="form-control" id="signupPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputRePassword1" class="form-label" style="color: #ff595a">Re-Enter
+                            Password</label>
+                        <input type="password" class="form-control" id="signupRePassword">
+                    </div>
+
+                    <button type="submit" class="btn btn-light fw-bold" style="color: #ff595a">Sign up</button><br><br>
+                    <span style="color: white;">Have an Account? </span><a href="#" id="Signup1" data-bs-toggle="modal"
+                        data-bs-target="#myModal">Login</a>
+                  </form>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeBtn1" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar End -->
+
+    <!-- Home Section Start -->
+
+    <section id="home" class="">
+      <div class="container pb-5">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 content">
+            <h1>
+              Drive your Dreams : <br />
+              <span>Rent</span> with Ease!
+            </h1>
+            <p>
+              Your go-to place for renting
+              <span>PREMIUM</span> cars!
+            </p>
+             
+            <a href="#roadmap"><button type="submit" class="btn get-started mb-2">Get Started</button></a>
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="d-block mx-lg-auto img-fluid"
+              src="../images/cars.jpg"
+              alt=""
+              height="400"
+              width=""
+            />
+          </div>
+        </div>
+
+      <div class="row d-flex justify-content-center cities-section">
+          <h3 class="featured">Drive anywhere, anytime: Cars at your fingertips across <span>CITIES</span></h3>
+          <div class="col-md-3">
+            <div class="my-3" style="margin-right: 20px">
+              <h3 class="cities">CHENNAI</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="my-3" style="margin-right: 20px">
+              <h3 class="cities">HYDERABAD</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="my-3" style="margin-right: 20px">
+              <h3 class="cities">MUMBAI</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="my-3" style="margin-right: 20px;">
+              <h3 class="cities">DELHI</h3>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Home Section End -->
+    
+
+    <!-- Roadmap Section Start -->
+
+    <section id="roadmap">
+      <div class=" process-content container">
+        <h2 class="text-center my-5 pb-5">Our Renting <span> PROCESS </span> </h2>
+        <hr class="progress-line">
+        <div class="row process-block">
+            <div class="col-6 col-lg-3 text-start my-4">
+                <div class="bullet"></div>
+                <h5 class="text-uppercase mt-5">Pick Your Location </h5>
+                <p>Choose the location from which you would like to rent our car.</p>
+            </div>
+
+            <div class="col-6 col-lg-3 text-start my-4">
+                <div class="bullet"></div>
+                <h5 class="text-uppercase mt-5"> Pick Date & Time</h5>
+                <p>Specify exactly the time period during which you would like to rent our car.</p>
+            </div>
+
+            <div class="col-6 col-lg-3 text-start my-4">
+                <div class="bullet"></div>
+                <h5 class="text-uppercase mt-5">Verify Yourself </h5>
+                <p>Sign In using your account.</p>
+            </div>
+
+            <div class="col-6 col-lg-3 text-start my-4">
+                <div class="bullet"></div>
+                <h5 class="text-uppercase mt-5">Make Payment</h5>
+                <p>Pay the entire amount or just a token advance and pay the remaining amount while returning back the car.</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg d-flex justify-content-center">
+            <a href="#rent-now"><button type="submit" class="btn rent-now-button">Rent Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Section End -->
+
+  
+    <!-- About Section Start -->
+
+    <section id="about">
+    <div class="container">
+      <div class="row py-lg-5">
+
+        <h2 class="text-capitalize text-center m-0 py-lg-5 fw-bold">Why to choose us</h2>
+
+        <div class="text-center col-lg-4">
+          <img src="../images/search.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140">
+          <h4 class="fw-normal mt-5 ">Easy to find</h4>
+          <p>Discover your ideal ride effortlessly with intuitive search and user-friendly navigation.</p>
+        </div>
+
+        <div class="text-center col-lg-4">
+          <img src="../images/price.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140">
+          <h4 class="fw-normal mt-5">Affordable Prices</h4>
+          <p>Enjoy quality service at budget-friendly rates, making your journey cost-effective and enjoyable.</p>
+        </div>
+
+        <div class="text-center col-lg-4">
+          <img src="../images/time.png" class="bd-placeholder-img rounded-circle" alt="Bootstrap Themes" width="140"
+            height="140">
+          <h4 class="fw-normal mt-5 ">Quickly Process</h4>
+          <p>Swift booking ensures a hassle-free experience, saving you time for your adventures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section End -->
+
+  <!-- Rent Now Section Start -->
+
+  <section id="rent-now" class="pt-5">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 rent-content">
+            <h1>
+              Renting a <span>PREMIUM</span> car is  <br>
+              just a tap away!
+            </h1>
+          </div>
+          <div class="col-lg-6">
+            <h1 class="mt-5 mb-3 fw-bold">Rent a Car</h1>
+            <form>
+              <div class="mb-3">
+                <select class="form-select" id="citySelect" aria-placeholder="Select City">
+                    <option value="">Select City</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <div class="input-group date" id="pickupDateTimePicker" data-target-input="nearest">
+                  <input type="text" class="form-control datetimepicker-input " data-target="#pickupDateTimePicker" placeholder="Select Pickup Date and Time"/>
+                  <div class="input-group-append" data-target="#pickupDateTimePicker" data-toggle="datetimepicker">
+                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="input-group date" id="returnDateTimePicker" data-target-input="nearest">
+                  <input type="text" class="form-control datetimepicker-input" data-target="#returnDateTimePicker" placeholder="Select Return Date and Time"/>
+                  <div class="input-group-append" data-target="#returnDateTimePicker" data-toggle="datetimepicker">
+                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" id="search-cars-button" class="btn search-button">Search for Cars</button>
+              
+            </form>
+            
+          </div>
+        </div>
+      </div>   
+  </section>
+
+  <!-- Rent Now Section End -->
+
+  <!-- Testimonial Section Start -->
+
+  <section id="testimonial">
+    <div class="container my-5">
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img
+                  src="../images/quote.png"
+                  class="rounded mx-auto d-inline"
+                  alt="..."
+                />
+                <p class="testimonial-p mt-4">
+                  Finding the perfect car was a breeze thanks to the intuitive platform and seamless booking process.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Elon Musk</p>
+                    <p class="">CEO, X</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img
+                  src="../images/quote.png"
+                  class="rounded mx-auto d-inline"
+                  alt="..."
+                />
+                <p class="testimonial-p mt-4">
+                  Affordable rates without compromising quality! Booking was smooth, and the service exceeded expectations.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Marquess Brownie </p>
+                    <p class="">Youtuber</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="row my-5 py-lg-5">
+              <div class="col-md-8 mx-auto">
+                <img
+                  src="../images/quote.png"
+                  class="rounded mx-auto d-inline"
+                  alt="..."
+                />
+                <p class="testimonial-p mt-4">
+                  Quick reservations and reliable service. Highly recommended for hassle-free car rentals.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="pt-5 mb-1">Max Verstappen</p>
+                    <p class="">World Champion, F1 </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-swiper-button col-md-3 position-absolute">
+          <div class="swiper-button-prev testimonial-arrow"></div>
+          <div class="arrow-divider">|</div>
+          <div class="swiper-button-next testimonial-arrow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section End -->
+
+
+  <!-- FAQ Section start  -->
+
+  <section id="faq">
+    <div class="container my-5 py-5 ">
+        <h2 class="text-center my-5">Discover Helpful <span>INFORMATION</span> </h2>
+        <div class="accordion col-md-8 offset-md-2" id="accordionPanelsStayOpenExample">
+
+            <div class="accordion-item mt-3">
+                <h5 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        How old do I need to be to rent a car?
+                    </button>
+                </h5>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <p>Typically, you need to be at least 21 years old to rent a car. 
+                          However, some rental companies may require you to be 25 or older.
+                           Age requirements may vary depending on the location and the type of vehicle you wish to rent.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="accordion-item mt-3">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        What documents do I need to provide for car rental?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>You will generally need to provide a valid driver's license, a major credit card in your name, and proof of insurance. 
+                          International renters may need to provide additional documentation such as a passport and an international driver's permit.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="accordion-item mt-3">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Can I rent a car without a credit card?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Some rental companies accept debit cards or cash deposits, but most require a credit card for security purposes. 
+                          Make sure to check with the specific rental company for their payment policies.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="accordion-item mt-3">
+                <h5 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        Are there any additional fees or charges besides the rental rate?
+                    </button>
+                </h5>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Additional fees such as taxes, surcharges, insurance, fuel charges, and optional add-ons (like GPS or car seats) may apply. 
+                          These fees vary depending on the rental company and location.</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="accordion-item mt-3">
+                <h5 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFive">
+                        What is the cancellation policy for car reservations?
+                    </button>
+                </h5>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Cancellation policies vary by rental company and reservation type. 
+                          Typically, you can cancel or modify your reservation without penalty up to a certain time before the scheduled pick-up. 
+                          However, cancellations made closer to the pick-up time may incur fees or forfeiture of a portion of the rental cost. 
+                          Be sure to review the terms and conditions of your reservation for specific detaiThree</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section End -->
+
+  <!-- Footer Start -->
+
+  <footer class="footer mt-auto py-5" style="background-color: #182847">
+    <div class="container" style="background-color: #182847;">
+        <div class="row">
+            <div class="col-md-5 pr-4 mb-4">
+                <img src="../assets/car.gif" alt="logo" width="80" height="50">
+                <h3 class="mt-3 fs-1 fw-bold font-monospace" style="color: #ff595a;">caRent</h3>
+                <p class="nT">Experience luxury and ease with our premium car rental service.
+                   Welcome to your destination for exceptional driving experiences.</p>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5 style="color: #ff595a; font-weight: bold;">USEFUL LINKS</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2" class="nT"><a href="#" class="nav-link footer-text p-0 ">Home</a></li>
+                    <li class="nav-item mb-2" class="nT"><a href="#about" class="nav-link footer-text p-0 ">About</a></li>
+                    <li class="nav-item mb-2" class="nT"><a href="#testimonial" class="nav-link footer-text p-0 ">Testimonials</a>
+                    </li>
+                    <li class="nav-item mb-2" class="nT"><a href="#roadmap" class="nav-link footer-text p-0 ">Get Started
+                        </a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #ff595a; font-weight: bold;">Subscribe to our newsletter</h5>
+                <p class="nT"> Monthly digest of what's new and exciting from us.</p>
+                <div class="input-group">
+                    <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+                    <button class="btn subscribe-button" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top pt-4 ">
+            <p class="text-center" style="color: #f1e1cc;">© 2024 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex justify-content-center ">&emsp;
+                <li class="me-5  ms-5 "><a class="link-dark" href="#"><i class="bi bi-twitter-x"></i></a></li>
+                <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-instagram"></i></a></li>
+                <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-facebook"></i></i></a></li>
+                <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+        </div>
+      </div>
+  </footer>
+
+  <!-- Footer End -->
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/e9531eec98.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <script>
+
+      $(document).ready(function(){
+        fetchCities();
+        localStorage.setItem("isLoggedIn", false);
+        
+        $('#pickupDateTimePicker').datetimepicker({
+          format: 'YYYY-MM-DD HH:mm', 
+          minDate: new Date()
+        });
+        $('#returnDateTimePicker').datetimepicker({
+          format: 'YYYY-MM-DD HH:mm', 
+          minDate: new Date()
+        });
+
+        var swiper = new Swiper(".testimonial-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      }); 
+
+
+      function fetchCities() {
+    const xhr = new XMLHttpRequest();
+    
+    // Configure the request
+    xhr.open('GET', './assets/cities.json', true);
+    
+    // Set up callback function
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const response = JSON.parse(xhr.responseText);
+        const cities = response.cities; // Access the 'cities' array
+        console.log('Fetched cities:', cities); // Log the fetched data
+        populateSelect(cities);
+      } else {
+        console.error('Request failed with status:', xhr.status);
+      }
+    };
+    
+    xhr.send();
+}
+
+
+      function populateSelect(cities) {
+      const select = document.getElementById('citySelect');
+      
+      cities.forEach(function(city) {
+        const option = document.createElement('option');
+        option.value = city.id; // Assuming each city object has an 'id' property
+        option.textContent = city.name; // Assuming each city object has a 'name' property
+        select.appendChild(option);
+      });
+    }
+      
+    </script>
+  </body>
+</html>

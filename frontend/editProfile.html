@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css" />
+
+    <style>
+        .needs-validation {
+            background-color: #001233;
+        }
+
+
+
+
+        label[for="validationCustom01"],
+        label[for="validationCustom02"],
+        label[for="validationCustom03"],
+        label[for="validationCustom04"],
+        button.btn.btn-primary {
+            color: #ff595a;
+        }
+
+
+        button.btn.btn-primary {
+            background-color: #f1e1cc;
+            border-color: #ff595a;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Nav bar starting  -->
+    <nav class="navbar navbar-expand-lg  sticky-top shadow-sm" id="stylemyNav" style="background-color: #001233;">
+        <div class="container-fluid" style="background-color: #001233;">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand  fs-1 fw-bold font-monospace" href="#" style="color:#ff595a">
+                    <img src="./assets/car.gif" alt="Logo" width="85" height="50"
+                        class="d-inline-block align-text-top car-gif">
+                    caRent
+                </a>
+            </div>
+
+            <a href="./results.html"><button class="btn btn-outline-light m-3 fw-bold border-0" style="color:#ff595a"
+                    id="myBack">Back</button></a>
+        </div>
+    </nav>
+
+    
+    <!-- Nav bar Ending -->
+
+    <hr style="background-color: #f1e1cc; font-weight:bolder; font-size: larger;">
+
+    <!-- Account Info Heading -->
+    <h1 align="center" style="padding: 50px; font-weight: bold;">Account Information</h1>
+    <!-- Heading End here -->
+
+    <!-- Content of Editing Starts here  -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" id="saveChanges-form" class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom03">Phone number</label>
+                            <input type="number" class="form-control" id="phone"
+                                placeholder="Enter a valid phone number" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom04">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter a valid Email"
+                                required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="validationCustom02">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="New Password"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 20px ;">
+                        <a href=""><button type="submit" class="btn search-button"
+                                style="font-size: large; padding-top: 9px; padding-bottom: 8px;">Save
+                                Changes</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Editing ends here -->
+
+
+    <!-- Footer Starts here -->
+    <br>
+    <br>
+    <footer class="footer mt-auto py-5" style="background-color: #182847">
+        <div class="container" style="background-color: #182847;">
+            <div class="row">
+                <div class="col-md-5 pr-4 mb-4">
+                    <img src="./assets/car.gif" alt="logo" width="80" height="50">
+                    <h3 class="mt-3 fs-1 fw-bold font-monospace" style="color: #ff595a;">caRent</h3>
+                    <p class="nT">Experience luxury and ease with our premium car rental service.
+                        Welcome to your destination for exceptional driving experiences.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 style="color: #ff595a; font-weight: bold;">USEFUL LINKS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2" class="nT"><a href="#" class="nav-link footer-text p-0 ">Home</a></li>
+                        <li class="nav-item mb-2" class="nT"><a href="#about"
+                                class="nav-link footer-text p-0 ">About</a></li>
+                        <li class="nav-item mb-2" class="nT"><a href="#testimonial"
+                                class="nav-link footer-text p-0 ">Testimonials</a>
+                        </li>
+                        <li class="nav-item mb-2" class="nT"><a href="#roadmap" class="nav-link footer-text p-0 ">Get
+                                Started
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #ff595a; font-weight: bold;">Subscribe to our newsletter</h5>
+                    <p class="nT"> Monthly digest of what's new and exciting from us.</p>
+                    <div class="input-group">
+                        <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+                        <button class="btn subscribe-button" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top pt-4 ">
+                <p class="text-center" style="color: #f1e1cc;">©️ 2024 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex justify-content-center ">&emsp;
+                    <li class="me-5  ms-5 "><a class="link-dark" href="#"><i class="bi bi-twitter-x"></i></a></li>
+                    <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-facebook"></i></i></a></li>
+                    <li class="me-5"><a class="link-dark" href="#"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends here here -->
+
+    <script>
+
+        const saveChangesVar = document.getElementById("saveChanges-form");
+        saveChangesVar.addEventListener("submit", saveChanges);
+
+        async function saveChanges(event) {
+        event.preventDefault();
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("newPassword").value;
+        const phone = document.getElementById("phone").value;
+
+        const result = await fetch("/user/saveChanges", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            password,
+            phone,
+          }),
+        }).then((res) => res.json());
+
+        if (result.status === "ok") {
+          alert("User updated successfully!");
+          form.reset();
+        } else {
+          alert(result.error);
+        }
+      }
+    </script>
+
+</body>
+
+</html>
