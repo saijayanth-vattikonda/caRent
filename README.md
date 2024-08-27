@@ -1,7 +1,4 @@
-Here's the updated README file with the application link added:
-
 ---
-
 # caRent Web Application
 
 Welcome to **caRent**! This project is a comprehensive platform for renting cars, offering a user-friendly interface for customers to browse and book vehicles, as well as an admin interface to manage the rental operations.
